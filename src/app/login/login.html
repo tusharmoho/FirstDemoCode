@@ -1,1 +1,23 @@
-<p>login works!</p>
+<hr>
+<h1 id="heading">Welcome To Login</h1>
+<hr>
+
+<div class ="firstDiv">
+  <form (ngSubmit)="message()" class="formDiv">
+    <div class="secondDiv">
+      <label>Enter Username:</label>
+      <input type="text" [(ngModel)]="login.username" name ="username" class="inputs"><br>
+
+      <label>Enter Password:</label>
+      <input type="password" [(ngModel)]="login.password" name ="password"  class="inputs"><br>
+     
+    </div>
+    <button type="submit">Submit</button><br><br>
+
+    <a href="/register">Register Here</a>
+
+
+  </form>
+  
+
+</div>

@@ -1,0 +1,48 @@
+<hr>
+<h1 id="heading">Welcome To Swiggy</h1> 
+<h2 id="heading">Date: {{ currentTime }}</h2>
+<hr>
+
+<h3 id="heading">Choose Your Favorite Snack...</h3>
+
+<form class="block"  (ngSubmit)="takeOrder()">
+  <table border="1" cellspacing="0" cellpadding="8">
+    <thead>
+      <tr>
+        <th>Items</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Samosa</td>
+        <td>
+          <input type="number" [(ngModel)]="items.samosa" name="samosa" min="0" placeholder="Enter Quantity" >
+        </td>
+      </tr>
+      <tr>
+        <td>Kachori</td>
+        <td>
+          <input type="number" [(ngModel)]="items.kachori" name="kachori"  min="0" placeholder="Enter Quantity" >
+        </td>
+      </tr>
+      <tr>
+        <td>Poha</td>
+        <td>
+          <input type="number" [(ngModel)]="items.poha" name="poha"  min="0" placeholder="Enter Quantity" >
+        </td>
+      </tr>
+      <tr>
+        <td>Idli</td>
+        <td>
+          <input type="number" [(ngModel)]="items.idli" name="idli"  min="0" placeholder="Enter Quantity" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+   <br>
+  <button type="submit">Order Now</button>
+</form>
+

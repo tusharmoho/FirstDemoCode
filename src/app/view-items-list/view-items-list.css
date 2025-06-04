@@ -1,0 +1,10 @@
+#heading {
+    text-align: center;
+    color: dodgerblue; /* or use 'brown' if preferred, but only one color */
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

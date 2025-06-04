@@ -2,23 +2,23 @@
 <h1 id="heading">Welcome To Register Page</h1>
 <hr>
 
-<div class ="firstDiv">
+<div class="firstDiv">
+  <form (ngSubmit)="registerUser()" class="formDiv">
     <h1>Register Here</h1>
-  <form (ngSubmit)="message()" class="formDiv">
     <div class="secondDiv">
       <label>Enter Username:</label>
-      <input type="text" class="inputs"><br>
-            <label>Enter Name:</label>
-      <input type="text" class="inputs"><br>
-            <label>Enter Surname:</label>
-      <input type="text" class="inputs"><br>
+      <input type="text" [(ngModel)]="user.username" name="username" class="inputs"><br>
+
+      <label>Enter Name:</label>
+      <input type="text" [(ngModel)]="user.name" name="name" class="inputs"><br>
+
+      <label>Enter Surname:</label>
+      <input type="text" [(ngModel)]="user.surname" name="surname" class="inputs"><br>
 
       <label>Enter Password:</label>
-      <input type="password" class="inputs"><br>
-     
+      <input type="password" [(ngModel)]="user.password" name="password" class="inputs"><br>
     </div>
-    <button type="submit" >Submit</button><br>
-  </form>
- 
-</div>
 
+    <button type="submit">Submit</button><br>
+  </form>
+</div>
