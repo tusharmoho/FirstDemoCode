@@ -1,0 +1,20 @@
+#heading{
+    text-align: center;
+    color: brown dodgerblue;
+
+}
+
+.firstDiv{
+display: flex; justify-content: center; align-items: center; height: 70vh;
+}
+
+.formDiv{
+    border: 2px solid chocolate ; padding: 20px; width: 300px; text-align: center;
+}
+
+.secondDiv{
+    display: flex; flex-direction: column; align-items: center;
+}
+.inputs{
+    width: 80%;
+}
