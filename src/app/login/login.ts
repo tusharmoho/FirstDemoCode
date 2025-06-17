@@ -1,26 +1,37 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Clients } from '../clients';
+import { HttpClientModule } from '@angular/common/http';
+
+export interface LoginData {
+  username: string;
+  password: string;
+}
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule],
+  imports: [FormsModule,HttpClientModule],
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  providers: [Clients],
+  styleUrls: ['./login.css'] 
 })
 export class Login {
 
-  login ={
-    username : '',
-    password : ''
-  }
+  login: LoginData = {
+    username: '',
+    password: ''
+  };
 
-  constructor(private router: Router) {}
-  message(){
-    console.log("Done ",this.login);
-      this.router.navigate(['/snack']);  
-    alert('Login Successfully Done..!');
-  
-  }
+  constructor(private router: Router, private client: Clients) {} // Corrected `clinent` to `client`
 
+  message() {
+    this.client.loginCheck(this.login).subscribe(
+      response => {
+        console.log("Login successful", response);
+        alert('Login Successfully Done..!' + response.message);
+        this.router.navigate(['/snack']);  
+      }
+    );
+  }
 }
