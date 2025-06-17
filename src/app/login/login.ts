@@ -29,7 +29,7 @@ export class Login {
     this.client.loginCheck(this.login).subscribe(
       response => {
         console.log("Login successful", response);
-        alert('Login Successfully Done..!' + response.message);
+        alert('Login Successfully Done..! ' + response.message);
         this.router.navigate(['/snack']);  
       }
     );

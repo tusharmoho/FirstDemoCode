@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginData } from './login/login';
+import { userRegistraion } from './register/register';
 
 
 interface LoginResponse {
@@ -15,6 +16,9 @@ export class Clients {
 
 loginCheck(data: LoginData) {
   return this.http.post<LoginResponse>('http://localhost:9098/login-service/login-check', data);
+}
+registerUser(data :userRegistraion){
+return this.http.post<LoginResponse>('http://localhost:9098/register-service/register-user', data);
 }
 
 }

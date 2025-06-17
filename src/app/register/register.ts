@@ -2,6 +2,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Clients } from '../clients';
+import { Router } from '@angular/router';
+
+export interface userRegistraion{
+   username:string,
+   name:string,
+   password:string,
+   surname:string
+}
 
 @Component({
   selector: 'app-register',
@@ -12,7 +20,9 @@ import { Clients } from '../clients';
   styleUrls: ['./register.css']
 })
 export class Register {
-  user = {
+    constructor(private router: Router, private client: Clients) {} // Corrected `clinent` to `client`
+
+  user : userRegistraion = {
     username: '',
     name: '',
     surname: '',
@@ -20,7 +30,13 @@ export class Register {
   };
 
   registerUser() {
-    console.log('Registered User:', this.user);
-    alert('Register Successful!');
+
+    this.client.registerUser(this.user).subscribe(
+      response => {
+        console.log("Register successful", response);
+        alert('Registration Id Is' + response.message);
+        this.router.navigate(['/login-user']);  
+      }
+    );
   }
 }
