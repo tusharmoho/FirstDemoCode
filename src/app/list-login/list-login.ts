@@ -46,7 +46,8 @@ export class ListLogin implements OnInit {
   }
 
   onRowClick(password: string): void {
-    alert('Your Password Is: ' + password);
+    this.router.navigate(['/view-user'], { queryParams: { password: password} });
+ 
   }
 
   get paginatedData(): LoginDataList[] {

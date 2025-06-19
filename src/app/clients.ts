@@ -27,5 +27,7 @@ listUser(): Observable<LoginDataList[]> {
   return this.http.get<LoginDataList[]>('http://localhost:9098/login-service/login-list');
 }
 
-
+viewUser(data :string){
+return this.http.get<LoginDataList>('http://localhost:9098/login-service/login-data?username= '+ data);
+}
 }
