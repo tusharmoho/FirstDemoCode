@@ -1,45 +1,83 @@
-#heading{
-    text-align: center;
-    color: blueviolet;
-
+#heading {
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
 }
 
+/* 🔍 Search Box */
+.search-box {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 14px;
+  width: 60%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
 
+.search-box:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* 📋 Table Styling */
 .table-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
-  table {
-    border-collapse: collapse;
-    width: 60%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
+table {
+  border-collapse: collapse;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  thead {
-    background-color: #4CAF50;
-    color: white;
-  }
+thead {
+  background-color: #4CAF50;
+  color: white;
+}
 
-  th, td {
-    padding: 12px 20px;
-    border-bottom: 1px solid #ddd;
-  }
+th, td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+}
 
-  tbody tr:hover {
-    background-color: #f1f1f1;
-  }
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
 
-  .search-box {
-    display: block;
-    margin: 20px auto;
-    padding: 10px;
-    width: 60%;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
+/* 📄 Pagination Controls */
+.pagination {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:hover:not([disabled]) {
+  background-color: #388e3c;
+}
+
+.pagination button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

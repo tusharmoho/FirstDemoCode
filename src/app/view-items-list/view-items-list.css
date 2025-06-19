@@ -1,10 +1,68 @@
 #heading {
-    text-align: center;
-    color: dodgerblue; /* or use 'brown' if preferred, but only one color */
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  margin: 15px 0;
 }
 
-.block {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+form.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 80%;
+  max-width: 600px;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 16px;
+  font-size: 18px;
+}
+
+td {
+  padding: 10px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+}
+
+input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76,175,80,0.4);
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 25px;
+  padding: 10px 24px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #388e3c;
 }
